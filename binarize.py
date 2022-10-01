@@ -20,7 +20,7 @@ def load_binarized_image(filename):
         w, h = img.size
         return {"height": h, "width": w, "pixels": pixels}
 
-def save_greyscale_image(image, filename, mode="PNG"):
+def save_image(image, filename, mode="PNG"):
     out = Image.new(mode="L", size=(image["width"], image["height"]))
     out.putdata(image["pixels"])
     if isinstance(filename, str):
@@ -28,8 +28,25 @@ def save_greyscale_image(image, filename, mode="PNG"):
     else:
         out.save(filename, mode)
     out.close()
+def remove_staff(filename):
+    with open(filename, "rb") as img_handle:
+        img = Image.open(img_handle)
+        img = img.convert('L')
+        img_data = img.getdata()
+        w, h = img.size
+        pixels = list(img_data)
+        stafflines = [0]*h
+        for i in range(h):
+            for j in range(w):
+                stafflines[i] += pixels[w*i+j]
+            if stafflines[i]<10*w:
+                for j in range(w):
+                    pixels[w*i+j]=255
+        #print(stafflines)
+        return {"height": h, "width": w, "pixels": pixels}
+                
+        
 
-
-filename = '/Users/lawrenceliu/Downloads/IMG_0098.png'
-pic = load_binarized_image(filename)
-save_greyscale_image(pic, '/Users/lawrenceliu/Downloads/IMG_0099.png')
+filename = '/Users/lawrenceliu/Downloads/IMG_0099.png'
+pic = remove_staff(filename)
+save_image(pic, '/Users/lawrenceliu/Downloads/IMG_0100.png')
