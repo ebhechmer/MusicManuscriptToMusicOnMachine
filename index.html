@@ -1,92 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="css/style.css" rel="stylesheet">
-          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    </head>
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lawrence Liu, Damir Kulzhanov, Michael Serrano, Braden Hechmer">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Mens et Manuscript</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        .topnav{
-            background-color: #1E90FF;
-            overflow: hidden;
-        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-        .topnav a{
-            float: right;
-            color: white;
-            text-align: center;
-            padding: 14px 25px;
-            font-size: 18px;
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
-        .topnav a:hover {
-            background-color: #87CEFA;
-            color: black;
-        }
-
-        .df {
-            margin: 0;
-            padding: 15;
-
-        }
-
-        .header {
-            padding: 20px;
-            margin: 20px;
-        }
-
-        .header hr{
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border-top: 2px solid gray;
-            width: 70%;
-        }
-        .choose_file {
-            padding: 20px;
-            /* margin-left: 100px; */
-            margin: auto;
-            text-align: center;
-            width: 50%;
-            position: center;
-            border: 2px solid black;
-        }
-        
-        input [type=submit]{
-            padding: 20px;
-            background-color: #04AA6D;
-        }
+      }
     </style>
 
-    <div class="topnav">
-        <a class="active" href="#home">Contact</a>
-        <a href="#news">Service</a>
-        <a href="#contact">About</a>
-        <a href="#about">Home</a>
-      </div>
-
-    <div class="header" class = 'container-fluid padding'>
-        <div class = 'row welcome text-center'>
-            <div class = 'col-12'>
-                <h5 class = 'display-4'>AI-aided Image Processing</h5>
-            </div>
-            
-            <hr>
     
-            <div class = 'col-12'>
-                <p class = 'lead'>Online platform to convert handwritten sheet music to MIDI files and a sheet music document
-                </p>
-            </div>
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Mens et Manuscript</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">About</a>
+          </nav>
         </div>
-    </div>
+      </header>
     
-    <div class = "choose_file">
-        <form action="/action_page.php">
-            <input type="file" id="myFile" name="filename">
-            <input type="submit">
-          </form>
-    </dive>
-
+      <main class="px-3">
+        <h1>From Photo to Midi File</h1>
+        <p class="lead">Turn a photo of a handwritten manuscript into a digitized music file with just a few clicks</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+        </p>
+      </main>
+    
+      <footer class="mt-auto text-white-50">
+        <p>Created during HackMIT 2022</p>
+      </footer>
+    </div>
+  </body>
 </html>
