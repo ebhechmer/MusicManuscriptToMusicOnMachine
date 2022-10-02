@@ -213,7 +213,9 @@ if __name__ == "__main__":
     cv2.imwrite('res.png', img)
     open_file('res.png')
    
+    notes = []
     for note_group in note_groups:
-        print([ note.note + " " + note.sym for note in note_group])
+        for note in note_group:
+            notes.append(note.note)
 
-    print(note_group)
+    print(notes)
