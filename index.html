@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="css/style.css" rel="stylesheet">
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+
+    <style>
+        .topnav{
+            background-color: #1E90FF;
+            overflow: hidden;
+        }
+
+        .topnav a{
+            float: right;
+            color: white;
+            text-align: center;
+            padding: 14px 25px;
+            font-size: 18px;
+        }
+        .topnav a:hover {
+            background-color: #87CEFA;
+            color: black;
+        }
+
+        .df {
+            margin: 0;
+            padding: 15;
+
+        }
+
+        .header {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .header hr{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: 2px solid gray;
+            width: 70%;
+        }
+        .choose_file {
+            padding: 20px;
+            /* margin-left: 100px; */
+            margin: auto;
+            text-align: center;
+            width: 50%;
+            position: center;
+            border: 2px solid black;
+        }
+        
+        input [type=submit]{
+            padding: 20px;
+            background-color: #04AA6D;
+        }
+    </style>
+
+    <div class="topnav">
+        <a class="active" href="#home">Contact</a>
+        <a href="#news">Service</a>
+        <a href="#contact">About</a>
+        <a href="#about">Home</a>
+      </div>
+
+    <div class="header" class = 'container-fluid padding'>
+        <div class = 'row welcome text-center'>
+            <div class = 'col-12'>
+                <h5 class = 'display-4'>AI-aided Image Processing</h5>
+            </div>
+            
+            <hr>
+    
+            <div class = 'col-12'>
+                <p class = 'lead'>Online platform to convert handwritten sheet music to MIDI files and a sheet music document
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class = "choose_file">
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+          </form>
+    </dive>
+
+</html>
