@@ -237,7 +237,7 @@ if __name__ == "__main__":
 
 def concatenatevertically(music, notes1):
     a = []
-    path = "/Users/bhechmer/HackMIT22/MusicManuscriptToMusicOnMachine/All Notes/"
+    path = "/All Notes/"
     for i in range(len(music)):
             a.append(path+notes1.get(music[i]))
     print(a)
@@ -251,11 +251,11 @@ def makeFile(music, notes1):
             temp = cv2.imread(b[1])
             temp2 = cv2.vconcat([img1,temp])
             print(i)
-            cv2.imwrite("/Users/bhechmer/HackMIT22/MusicManuscriptToMusicOnMachine/temporary.png",temp2)
+            cv2.imwrite("/temporary.png",temp2)
         else:
-            temp2 = cv2.imread("/Users/bhechmer/HackMIT22/MusicManuscriptToMusicOnMachine/temporary.png")
+            temp2 = cv2.imread("/temporary.png")
             temp = cv2.imread(b[i])
             img = cv2.vconcat([temp2,temp])
             print(i)
-            cv2.imwrite("/Users/bhechmer/HackMIT22/MusicManuscriptToMusicOnMachine/temporary.png",img)
+            cv2.imwrite("/temporary.png",img)
 makeFile(notes, notes1)
